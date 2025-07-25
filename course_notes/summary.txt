@@ -1,0 +1,85 @@
+Useful for modeling problems like:
+
+Traveling Salesperson Problem (TSP)
+
+Knapsack
+
+Scheduling
+
+Constraint satisfaction
+
+📌 2. Solvers in D-Wave Ocean
+Solver	Description
+LeapHybridSampler (HSS)	Hybrid quantum-classical solver, uses real quantum annealing (QPU) behind the scenes
+SimulatedAnnealingSampler (neal)	Classical-only solver, mimics cooling metal to find low-energy states
+ExactSolver	Brute-force solver for very small problems
+QPU Sampler	Pure quantum annealing, used directly via EmbeddingComposite
+
+📌 3. Hybrid Solver Service (HSS)
+Combines classical algorithms with quantum annealing
+
+Uses problem decomposition to solve large QUBOs
+
+Orchestrates subproblem solving using QPU and classical heuristics
+
+Real quantum tunneling happens inside the QPU
+
+Operates at ~15 millikelvin using superconducting circuits
+
+📌 4. Simulated Annealing (neal)
+Classical algorithm that simulates the physical annealing process
+
+Starts at high "temperature", cools over time to avoid local minima
+
+Fast and lightweight but can get stuck in suboptimal solutions
+
+No quantum effects, runs on a regular CPU
+
+📌 5. Lagrange Multiplier in QUBO
+Adds penalties to enforce constraints (e.g., only one city per time slot)
+
+Value is chosen to make breaking rules more costly than taking longer paths
+
+Typical value: lagrange = 4000 or 2 × max edge weight
+
+📌 6. TSP – Traveling Salesperson Problem
+Objective: Find the shortest route visiting all cities once and returning to the start
+
+Modeled using dwave_networkx.traveling_salesman_qubo()
+
+Two constraints:
+
+Each city appears once
+
+Each position is assigned to one city
+
+📌 7. Knapsack Problem
+Goal: Maximize total value of items in a knapsack without exceeding weight limit
+
+Each item has a binary variable (take or not)
+
+QUBO adds penalties for exceeding the weight limit
+
+Classical example of resource allocation
+
+📌 8. Key Libraries Used
+Library	Purpose
+dwave-ocean-sdk	D-Wave’s main SDK
+dwave-networkx	Build standard QUBO models (TSP, coloring, etc.)
+dimod	Create and work with binary models
+neal	Classical simulated annealing
+dwave-system	Tools for using QPU and hybrid solvers
+
+🧠 Extras You Now Understand
+Quantum annealing uses quantum tunneling to escape local minima.
+
+HSS is like having a team of classical + quantum solvers managed intelligently.
+
+Simulated annealing is like one person trying to cool metal to find the best shape.
+
+neal is just D-Wave’s classical-only simulated annealer.
+
+Offset in QUBO just adjusts energy, doesn’t affect optimization.
+
+The energy printed (response.first.energy) includes distance + penalties (if any).
+
