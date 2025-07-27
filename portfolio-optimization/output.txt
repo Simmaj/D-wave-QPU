@@ -1,0 +1,29 @@
+/workspaces/portfolio-optimization/exercise_1.py
+
+Part 1 solution:
+
+Solution:
+
+Best feasible solution found:
+SFL
+GE
+
+/workspaces/portfolio-optimization/exercise_2.py
+
+Part 2 solution:
+
+Solution:
+
+Best feasible solution found:
+SFL
+XOM
+
+/workspaces/portfolio-optimization/exercise_3.py
+
+Part 3 solution:
+
+Solution:
+
+Best feasible solution found:
+T
+SFL
