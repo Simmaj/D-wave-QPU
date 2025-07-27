@@ -1,0 +1,5 @@
+ box_17 box_19 box_21 energy num_oc. chain_.
+0      1      1      0   36.0      47     0.0
+1      1      0      1   38.0      26     0.0
+2      0      1      1   40.0      27     0.0
+['BINARY', 3 rows, 100 samples, 3 variables]
