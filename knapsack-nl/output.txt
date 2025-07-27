@@ -1,0 +1,1 @@
+For state 0, [array([1., 0., 0., 0., 1.])] results in objective -98.0
