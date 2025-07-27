@@ -1,0 +1,45 @@
+/workspaces/employee-scheduling/scheduling_preferences.py
+
+Schedule Anna for shift 1
+Schedule Bill for shift 3
+Schedule Chris for shift 4
+Schedule Diane for shift 2
+
+
+/workspaces/employee-scheduling/scheduling_addemployees.py
+Shift: 1        Employee(s):  ['Anna', 'Erik']
+Shift: 2        Employee(s):  ['Diane', 'Greta']
+Shift: 3        Employee(s):  ['Bill', 'Harry']
+Shift: 4        Employee(s):  ['Chris', 'Francis']
+
+
+#Restrict Anna from working shift 4
+/workspaces/employee-scheduling/scheduling_restrictions.py
+Shift: 1        Employee(s):  ['Anna', 'Erica']
+Shift: 2        Employee(s):  ['Diane', 'Harriet']
+Shift: 3        Employee(s):  ['Bill', 'Frank']
+Shift: 4        Employee(s):  ['Chris', 'George']
+
+
+#Bill and Frank cannot work during the same shift
+/workspaces/employee-scheduling/scheduling_restrictions.py
+Shift: 1        Employee(s):  ['Anna', 'Erica']
+Shift: 2        Employee(s):  ['Diane', 'Frank', 'Harriet']
+Shift: 3        Employee(s):  ['Bill']
+Shift: 4        Employee(s):  ['Chris', 'George']
+
+
+#Erica and Harriet would like to work the same shift
+/workspaces/employee-scheduling/scheduling_restrictions.py
+Shift: 1        Employee(s):  ['Anna']
+Shift: 2        Employee(s):  ['Bill', 'Diane', 'Erica', 'Harriet']
+Shift: 3        Employee(s):  ['Frank']
+Shift: 4        Employee(s):  ['Chris', 'George']
+
+#Modify the function `build_cqm()` to reflect these additional constraints. Note that when you run your program, you may not have two employees per shift this time.
+# this output works for all the restrictions above
+/workspaces/employee-scheduling/scheduling_restrictions.py
+Shift: 1        Employee(s):  ['Anna', 'Frank']
+Shift: 2        Employee(s):  ['Erica', 'Harriet']
+Shift: 3        Employee(s):  ['Bill', 'Diane']
+Shift: 4        Employee(s):  ['Chris', 'George']
